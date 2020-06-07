@@ -225,7 +225,7 @@ var totalSnacks = amountPerYear * (maxAge - age);
 document.write("You will need " + totalSnacks + " " + favSnack + " to last you until the ripe old age of  " + maxAge + "<br></p>");
 
 
-//Chapter 6:
+//Chapter 6-9:
 //1
 var a = +prompt("Enter number: ", "number");
 document.write("The value of a is: " + a + "<br>");
@@ -489,3 +489,77 @@ if (operator == "+") {
     alert("Invalid operator");
 }
 alert("Result = " + result);
+
+//Chapter 12 - 13
+//1
+var ch = prompt("Enter a character: ");
+if (ch >= '0' && ch <= '9') {
+    alert("You entered a number");
+} else if (ch >= 'a' && ch <= 'z') {
+    alert("You entered a lowercase letter");
+} else if (ch >= 'A' && ch <= 'Z') {
+    alert("You entered an uppercase letter");
+} else {
+    alert("Your enter character is neither a number, nor a letter.");
+}
+
+//2
+var int1 = +prompt("Enter 1st integer: ");
+var int2 = +prompt("Enter 2nd integer: ");
+if (int1 === int2) {
+    alert("The integers are equal");
+} else if (int1 > int2) {
+    alert("Integer 1 is larger");
+} else {
+    alert("Integer 2 is larger");
+}
+
+//3
+var number = +prompt("Enter a number: ");
+if (number === 0) {
+    alert("Zero");
+} else if (number > 0) {
+    alert("Positive");
+} else {
+    alert("Negative");
+}
+
+//4
+var ch = prompt("Enter a character: ");
+if (ch === 'a' || ch === 'e' || ch === 'i' || ch === 'o' || ch === 'u') {
+    alert("Vowel");
+} else {
+    alert("Not a vowel");
+}
+
+//5
+var password = "pass123";
+var userPassword = prompt("Please enter your password: ");
+if (password === userPassword) {
+    alert("Correct! The password you entered matches the original password.");
+} else {
+    alert("Incorrect password");
+}
+
+//6
+var greeting;
+var hour = 13;
+if (hour < 18) {
+    greeting = "Good day";
+} else {
+    greeting = "Good evening";
+}
+
+//7
+var time = +prompt("Enter time in 24 hour format");
+if (time >= 0000 && time < 1200) {
+    alert("Good morning!");
+} else if (time >= 1200 && time < 1700) {
+    alert("Good afternoon!");
+} else if (time >= 1700 && time < 2100) {
+    alert("Good evening!");
+} else if (time >= 2100 && time <= 2359) {
+    alert("Good night!")
+} else {
+    alert("Please enter correct time");
+}
