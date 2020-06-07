@@ -318,3 +318,174 @@ document.write("<th>" + totalPercentage + "%" + "</th>");
 document.write("</tr>");
 
 document.write("</table>");
+
+
+//Chapter 9 - 11
+//1
+var city = prompt("Enter city name");
+if (city === "Karachi") {
+    alert("Welcome to the city of lights");
+}
+
+//2
+var gender = prompt("Enter gender");
+if (gender == "male") {
+    alert("Good Morning Sir");
+} else if (gender == "female") {
+    alert("Good Morning Ma/'am");
+}
+
+//3
+var signal = prompt("Input color of road traffic signal");
+if (signal == "Red") {
+    alert("Must stop");
+} else if (signal == "Yellow") {
+    alert("Ready to move");
+} else if (signal == "Green") {
+    alert("Move now")
+}
+
+//4
+var fuel = +prompt("Input remaining fuel in litres:");
+if (fuel < 0.25) {
+    alert("Please refill the fuel in your car");
+}
+
+//5
+//a
+var a = 4;
+if (++a === 5) { //True
+    alert("given condition for variable a is true");
+}
+
+//b
+var b = 82;
+if (b++ === 83) { //False
+    alert("given condition for variable b is true");
+}
+
+//c
+var c = 12;
+if (c++ === 13) { //False
+    alert("condition 1 is true");
+}
+if (c === 13) { //True
+    alert("condition 2 is true");
+}
+if (++c < 14) { //False
+    alert("condition 3 is true");
+}
+if (c === 14) { //True
+    alert("condition 4 is true");
+}
+
+//d
+var materialCost = 20000;
+var laborCost = 2000;
+var totalCost = materialCost + laborCost;
+if (totalCost === laborCost + materialCost) { //True
+    alert("The cost equals");
+}
+
+//e
+if (true) { // True
+    alert("True");
+}
+if (false) { //False
+    alert("False");
+}
+
+//f
+if ("car" < "cat") { //True
+    alert("car is smaller than cat");
+}
+
+//6
+var obtainedMarks = [];
+var totalObtainedMarks = 0;
+for (var i = 0; i < 3; i++) {
+    obtainedMarks[i] = +prompt("Enter marks for subject " + (i + 1) + ": ");
+    totalObtainedMarks += obtainedMarks[i];
+}
+var totalMarks = +prompt("Enter total marks");
+document.write("<h1>Marks Sheet</h1>");
+document.write("Total marks: " + totalMarks + "<br>");
+document.write("Marks Obtained " + totalObtainedMarks + "<br>");
+var percentage = (totalObtainedMarks / totalMarks) * 100;
+document.write("Percentage " + percentage + "%<br>");
+var grade, remarks;
+if (percentage <= 100 && percentage >= 80) {
+    grade = "A-one";
+    remarks = "Excellent";
+} else if (percentage >= 70) {
+    grade = "A";
+    remarks = "Good";
+} else if (percentage >= 60) {
+    grade = "B";
+    remarks = "You need to improve";
+} else if (percentage >= 0) {
+    grade = "Fail";
+    remarks = "Sorry";
+}
+
+document.write("Grade: " + grade + "<br>");
+document.write("Remarks: " + remarks + "<br>");
+
+//7
+var secret = 6;
+var guess = +prompt("Guess the secret number from 1 to 10");
+if (guess === secret) {
+    alert("Bingo! Correct answer");
+} else if (guess === secret + 1 || guess === secret - 1) {
+    alert("Close enough to the correct answer");
+} else {
+    alert("Wrong answer");
+}
+
+//8
+var number = +prompt("Enter number to check: ");
+if (number % 3 === 0) {
+    alert("Number is divisible by 3");
+} else {
+    alert("Number is not divisible by 3");
+}
+
+//9
+var number = +prompt("Enter number to check: ");
+if (number % 2 === 0) {
+    alert("Number is even");
+} else {
+    alert("Number is odd");
+}
+
+//10
+var T = +prompt("Enter temprature");
+if (T > 40) {
+    alert("It is too hot outside");
+} else if (T > 30) {
+    alert("The weather today is normal");
+} else if (T > 20) {
+    alert("Today's weather is cool");
+} else if (T > 10) {
+    alert("OMG! Today's weather is so Cool");
+}
+
+//11
+var num1 = +prompt("Enter first number: ");
+var num2 = +prompt("Enter second number: ");
+var operator = prompt("Enter an operator: ");
+var result = 0;
+if (operator == "+") {
+    result = num1 + num2;
+} else if (operator === "-") {
+    result = num1 - num2;
+} else if (operator === "*") {
+    result = num1 * num2;
+} else if (operator === "/") {
+    result = num1 / num2;
+} else if (operator === "%") {
+    result = num1 % num2;
+} else {
+    alert("Invalid operator");
+}
+alert("Result = " + result);
