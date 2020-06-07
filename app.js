@@ -223,3 +223,98 @@ document.write("Estimated maximum age: " + maxAge + "<br>");
 document.write("Amount of snacks per year: " + amountPerYear + "<br>");
 var totalSnacks = amountPerYear * (maxAge - age);
 document.write("You will need " + totalSnacks + " " + favSnack + " to last you until the ripe old age of  " + maxAge + "<br></p>");
+
+
+//Chapter 6:
+//1
+var a = +prompt("Enter number: ", "number");
+document.write("The value of a is: " + a + "<br>");
+document.write("-----------------------------------------<br>");
+document.write("The value of ++a is: " + ++a + "<br>");
+document.write("Now the value of a is: " + a + "<br><br>");
+
+document.write("The value of a++ is: " + a++ + "<br>");
+document.write("Now the value of a is: " + a + "<br><br>");
+
+document.write("The value of --a is: " + --a + "<br>");
+document.write("Now the value of a is: " + a + "<br><br>");
+
+document.write("The value of a-- is: " + a-- + "<br>");
+document.write("Now the value of a is: " + a + "<br><br>");
+
+//2
+var a = 2;
+var b = 1;
+document.write("a is " + a + "<br>");
+document.write("b is " + b + "<br>");
+var result = --a - --b + ++b + b--;
+//            1     0     1     1     = 3
+document.write("result is " + result + "<br>");
+
+//3
+var name = prompt("Enter your name", "name");
+alert("Hello " + name + ". Have a nice day!");
+
+//4 Question not in pdf
+
+//5
+var number = +prompt("Enter number", "5");
+document.write("Table of " + number + "<br>")
+for (var i = 1; i <= 10; i++) {
+    document.write(number + " x " + i + " = " + number * i + "<br>");
+}
+
+//6
+var subjects = [];
+var totalMarks = 100;
+var obtainedMarks = [];
+var percentage = [];
+var totalObtainedMarks = 0;
+
+for (var i = 0; i < 3; i++) {
+    subjects[i] = prompt("Enter name of subject " + i + 1 + ": ", "Subject");
+    obtainedMarks[i] = +prompt("Enter marks of subject " + i + 1 + ": ", "0");
+    percentage[i] = (obtainedMarks[i] / totalMarks) * 100;
+    totalObtainedMarks += obtainedMarks[i];
+}
+
+var totalPercentage = (totalObtainedMarks / 300) * 100;
+
+document.write("<table>");
+
+document.write("<tr>");
+document.write("<th>" + "Subject" + "</th>");
+document.write("<th>" + "Total Marks" + "</th>");
+document.write("<th>" + "Obtained Marks" + "</th>");
+document.write("<th>" + "Percentage" + "</th>");
+document.write("</tr>");
+
+document.write("<tr>");
+document.write("<td>" + subjects[0] + "</td>");
+document.write("<td>" + 100 + "</td>");
+document.write("<td>" + obtainedMarks[0] + "</td>");
+document.write("<td>" + percentage[0] + "%" + "</td>");
+document.write("</tr>");
+
+document.write("<tr>");
+document.write("<td>" + subjects[1] + "</td>");
+document.write("<td>" + 100 + "</td>");
+document.write("<td>" + obtainedMarks[1] + "</td>");
+document.write("<td>" + percentage[1] + "%" + "</td>");
+document.write("</tr>");
+
+document.write("<tr>");
+document.write("<td>" + subjects[2] + "</td>");
+document.write("<td>" + 100 + "</td>");
+document.write("<td>" + obtainedMarks[2] + "</td>");
+document.write("<td>" + percentage[2] + "%" + "</td>");
+document.write("</tr>");
+
+document.write("<tr>");
+document.write("<th>" + "</th>");
+document.write("<th>" + 300 + "</th>");
+document.write("<th>" + totalObtainedMarks + "</th>");
+document.write("<th>" + totalPercentage + "%" + "</th>");
+document.write("</tr>");
+
+document.write("</table>");
