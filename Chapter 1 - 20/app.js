@@ -685,3 +685,114 @@ for (var i = 0; i < phoneManafacturers.length; i++) {
     document.write("<option>" + phoneManafacturers[i] + "</option>");
 }
 document.write("</select>");
+
+
+//Chapter 17 -20
+//1
+var arr = [
+    []
+];
+
+//2
+var arr = [
+    [0, 1, 2, 3],
+    [1, 0, 1, 2],
+    [2, 1, 0, 1]
+];
+for (var i = 0; i < arr.length; i++) {
+    document.write(arr[i] + "<br>");
+}
+
+//3
+for (var i = 1; i <= 10; i++) {
+    document.write(i + "<br>");
+}
+
+//4
+var tableNumber = +prompt("Enter a number to show its multiplication table: ");
+var tableLength = +prompt("Enter length of multiplication table: ");
+document.write("Multiplication table of " + tableNumber);
+document.write("Length: " + tableLength);
+for (var i = 1; i <= tableLength; i++) {
+    document.write(tableNumber + " x " + i + " = " + tableNumber + "<br>");
+}
+
+//5
+fruits = ["apple", "banana", "mango", "orange", "strawberry"];
+document.write("Fruits: " + fruits + "<br><br>");
+
+for (var i = 0; i < fruits.length; i++) {
+    document.write("Element at index " + i + " is " + fruits[i] + "<br>");
+}
+
+//6
+//a
+document.write("Counting: ");
+for (var i = 1; i <= 15; i++) {
+    document.write(i + ", ");
+}
+//b
+document.write("<br>Reverse counting: ");
+for (var i = 10; i > 0; i--) {
+    document.write(i + ", ");
+}
+//c
+document.write("<br>Even: ");
+for (var i = 0; i <= 20; i++) {
+    if (i % 2 == 0) {
+        document.write(i + ", ");
+    }
+}
+//d
+document.write("<br>Odd: ");
+for (var i = 0; i <= 20; i++) {
+    if (i % 2 == 1) {
+        document.write(i + ", ");
+    }
+}
+//e
+document.write("<br> Sequence: ");
+for (var i = 2; i <= 20; i += 2) {
+    document.write(i + "k, ");
+}
+//7
+A = ["cake", "apple pie", "cookie", "chips", "patties"];
+input = prompt("Welcome to ABC Bakery. What do you want to order, Sir / Ma'am?");
+var available = false;
+for (var i = 0; i < A.length; i++) {
+    if (input === A[i]) {
+        available = true;
+        break;
+    }
+}
+if (available === true) {
+    document.write(input + " is available at index " + i + " in our bakery");
+} else {
+    document.write("We are sorry. " + input + " is not available in our bakery.");
+}
+//8
+A = [24, 53, 78, 91, 12];
+document.write("Array items: " + A + "<br>");
+var max = 0;
+for (var i = 0; i < A.length; i++) {
+    if (A[i] > max) {
+        max = A[i];
+    }
+}
+document.write("The largest number is " + max + "<br>");
+//9
+A = [24, 53, 78, 91, 12];
+document.write("Array items: " + A + "<br>");
+var min = 10000;
+for (var i = 0; i < A.length; i++) {
+    if (A[i] < min) {
+        min = A[i];
+    }
+}
+document.write("The largest number is " + min + "<br>");
+//10
+for (var i = 1; i <= 100; i++) {
+    if (i % 5 === 0) {
+        document.write(i + ", ");
+    }
+}
