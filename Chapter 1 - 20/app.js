@@ -563,3 +563,125 @@ if (time >= 0000 && time < 1200) {
 } else {
     alert("Please enter correct time");
 }
+
+//Chapter 14 - 16
+//1
+var arr = [];
+
+//2
+var arr = new Array();
+
+//3
+var students = ["Mubeen", "Ali", "Saad"];
+
+//4
+var marks = [99, 76, 83, 49, 70];
+
+//5
+var status = [true, false, true, false, false];
+
+//6
+var arr = ["Hello", 12, 13.5, false, true];
+
+//7
+var qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil", "PhD"];
+document.write("<h1>Qualifications:</h1>");
+
+for (var i = 0; i < qualifications.length; i++) {
+    document.write((i + 1) + ") " + qualifications[i] + "<br>");
+}
+
+//8
+var students = ["Mubeen", "Hamza", "Azzam"];
+var score = [320, 230, 480];
+for (var i = 0; i < students.length(); i++) {
+    document.write("Score of " + students[i] + " is " + score[i] + ". Percentage = " + ((scores[i] / 500) * 100) + "%<br>");
+}
+
+//9
+var color = ["Red", "Blue", "Green", "Purple"];
+document.write("Initial array: " + color + "<br>");
+//a
+var input = prompt("Colour to add to the beginning: ");
+color.unshift(input);
+document.write("Updated array: " + color + "<br>");
+//b
+input = prompt("Colour to add at the end: ");
+color.push(input);
+document.write("Updated array: " + color + "<br>");
+//c
+var cInput1 = prompt("1st color to add to the beginning: ");
+var cInput2 = prompt("2nd color to add to the beginning: ");
+color.unshift(cInput1, cInput2);
+document.write("Updated array: " + color + "<br>");
+//d
+document.write("Deleting array from the beginning <br>");
+color.shift();
+document.write("Updated array: " + color + "<br>");
+//e
+document.write("Deleting array from the beginning <br>");
+color.pop();
+document.write("Updated array: " + color + "<br>");
+//f
+var addIndex = +prompt("Index to add color at:");
+var input = prompt("Enter color: ");
+color.splice(addIndex, 0, input);
+//g
+var delIndex = +prompt("Index to delete color at:");
+var delCount = +prompt("How many colors you want to delete?");
+color.splice(delIndex, delCount);
+
+//10
+var marks = [320, 230, 480, 120];
+document.write("Score of Students: " + marks + "<br>");
+marks.sort();
+document.write("Ordered Score of Students: " + marks + "<br>");
+
+//11
+var cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+document.write("Cities: " + cities + "<br>");
+var selectedCities = cities.slice(2, 4);
+document.write("Selected Cities: " + selectedCities + "<br>");
+
+//12
+var arr = ["This", "is", "my", "cat"];
+document.write("Array: " + arr + "<br>");
+var string = arr.join(" ");
+document.write("String: " + string + "<br>")
+
+//13
+var devices = [];
+var input;
+for (var i = 0; i <= 3; i++) {
+    input = prompt("Enter a device to add:");
+    devices.push(input);
+}
+document.write("Devices: " + devices + "<br>");
+
+for (var i = 0; i <= 3; i++) {
+    out = devices.shift();
+    document.write("Out: " + out + "<br>")
+}
+
+
+//14
+var devices = [];
+var input;
+for (var i = 0; i <= 3; i++) {
+    input = prompt("Enter a device to add:");
+    devices.push(input);
+}
+document.write("Devices: " + devices + "<br>");
+
+for (var i = 0; i <= 3; i++) {
+    out = devices.pop();
+    document.write("Out: " + out + "<br>")
+}
+
+//15
+var phoneManafacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+document.write("<select>");
+for (var i = 0; i < phoneManafacturers.length; i++) {
+    document.write("<option>" + phoneManafacturers[i] + "</option>");
+}
+document.write("</select>");
