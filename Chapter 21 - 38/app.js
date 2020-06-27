@@ -251,3 +251,168 @@ document.write("Charges per unit: <strong>" + unitCharge + "<br>" + "</strong><b
 document.write("Net Amount Payable (within Due Date): <strong>" + netPayable + "</strong><br>");
 document.write("Late Payment Surcharge: <strong>" + lateSurcharge + "</strong><br>");
 document.write("Gross Amount Payable (after Due Date): <strong>" + grossPayable + "</strong><br>");
+
+
+//Chapter 35 to 38
+//1
+function displayDateTime() {
+    document.write(new Date());
+}
+
+displayDateTime();
+//2
+function greeting(firstName, lastName) {
+    alert("Hello " + firstName + " " + lastName);
+}
+
+greeting("Mubeen", "Kodvavi");
+//3
+function addition() {
+    num1 = +prompt("Enter 1st number");
+    num2 = +prompt("Enter 2nd number");
+    return num1 + num2;
+}
+
+alert("Sum is " + addition());
+//4
+function operation(num1, num2, operator) {
+    switch (operator) {
+        case '+':
+            return num1 + num2;
+            break;
+        case '-':
+            return num1 - num2;
+            break;
+        case '*':
+            return num1 * num2;
+            break;
+        case '/':
+            return num1 / num2;
+            break;
+        default:
+            return "Invalid operator";
+    }
+}
+
+a = +prompt("Enter number 1: ");
+b = +prompt("Enter number 2: ");
+o = prompt("Enter operator: ");
+document.write("Answer is " + operation(a, b, o));
+//5
+function square(n) {
+    return n * n;
+}
+input = +prompt("Enter number: ")
+alert("Square is: " + square(input));
+//6
+function fact(n) {
+    var fac = 1;
+    for (var i = n; i > 0; i--) {
+        fac *= i;
+    }
+    return fac;
+}
+input = +prompt("Enter number: ")
+alert("Factorial is: " + fact(input));
+//7
+function count(start, end) {
+    document.write("Counting: ")
+    for (var i = start; i <= end; i++) {
+        document.write(i + ", ");
+    }
+}
+input1 = +prompt("Enter start point: ");
+input2 = +prompt("Enter end point: ");
+count(input1, input2);
+//8
+function calculateSquare(n) {
+    return n * n;
+}
+
+function calculateHypotenuse(base, perpendicular) {
+    document.write("Hypotenuse =" + Math.sqrt(calculateSquare(base) + calculateSquare(perpendicular)));
+}
+
+input1 = +prompt("Enter base: ");
+input2 = +prompt("Enter perpendicular");
+calculateHypotenuse(input1, input2);
+//9
+function areaOfRectangle(width, height) {
+    return height * width;
+}
+//i
+alert("Pass by value: " + areaOfRectangle(2, 3));
+var var1 = 2;
+var var2 = 3;
+//ii
+alert("Pass by variables: " + areaOfRectangle(var1, var2));
+//10
+function checkPalindrome(str) {
+    var stri = str.length;
+    for (var i = 0; i < str.length / 2; i++) {
+        if (str[i] !== str[str.length - i - 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+input = prompt("Enter a str: ");
+var pal = checkPalindrome(input);
+if (pal === true)
+    alert("String is palindrome");
+else
+    alert("String is not a palindrome");
+//11
+function titleCase(str) {
+    str = str[0].toUpperCase() + str.slice(1);
+    for (var i = 1; i < str.length - 1; i++) {
+        if (str[i] === ' ') {
+            str = str.slice(0, i + 1) + str[i + 1].toUpperCase() + str.slice(i + 2);
+        }
+    }
+    return str;
+}
+input = prompt("Enter a string: ");
+document.write("Input String: " + input + "<br>");
+document.write("Title Case String: " + titleCase(input));
+//12
+function longestString(str) {
+    var arr = str.split(" ");
+    var longest = "";
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i].length > longest.length) {
+            longest = arr[i];
+        }
+    }
+    return longest;
+}
+input = prompt("Enter a string: ");
+document.write("Input String: " + input + "<br>");
+document.write("Longest String: " + longestString(input));
+//13
+function countOccurences(str, letter) {
+    var count = 0;
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] === letter)
+            count++;
+    }
+    return count;
+}
+input = prompt("Enter a string: ");
+ch = prompt("Enter a character to count:");
+document.write("Input String: " + input + "<br>");
+document.write("|Character Count: " + countOccurences(input, ch));
+//14
+var pi = 3.142;
+
+function calcCircumference(radius) {
+    return 2 * pi * radius;
+}
+
+function calcArea(radius) {
+    return pi * radius * radius;
+}
+
+input = +prompt("Enter radius: ");
+document.write("Circumference of circle: " + calcCircumference(input) + "<br>");
+document.write("Area of Circle: " + calcArea(input));
