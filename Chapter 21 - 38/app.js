@@ -162,3 +162,92 @@ var guess = +prompt("Enter a number from 1 to 10:");
 if (guess === secretNumber) {
     alert("Congratulations");
 }
+
+
+//Chapter 31 to 34
+//1
+var date = new Date();
+document.write(date);
+//2
+var date = new Date();
+mList = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+document.write("Current month: " + mList[date.getMonth()]);
+//3
+var date = new Date();
+mList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+document.write("Today is " + date.getDay());
+//4
+var date = new Date();
+var day = date.getDay();
+if (day == 6 || day == 0)
+    document.write("Today is fun day");
+//5
+var date = new Date();
+tdate = date.getDate();
+if (tdate < 15)
+    document.write("First fifteen days of the month");
+else
+    document.write("Last days of the month");
+//6
+var date = new Date();
+var msToday = date.getTime();
+var minutesToday = date.getTime() / (1000 * 60);
+document.write("Current date: " + date + "<br>");
+document.write("Elapsed milliseconds since January 1, 1970: " + msToday + "<br>");
+document.write("Elapsed milliseconds since January 1, 1970: " + minutesToday + "<br>");
+//7
+var date = new Date();
+var hour = date.getHours();
+if (hour < 12)
+    document.write("It's AM");
+else
+    document.write("It's PM");
+//8
+var date = new Date("Dec 31, 2020");
+document.write(date);
+//9
+var Ramadan15 = new Date("Jun 18, 2015");
+var today = new Date();
+var msRamadan15 = Ramadan15.getTime();
+var mstoday = today.getTime();
+var dDiff = Math.floor((mstoday - msRamadan15) / (1000 * 60 * 60 * 24));
+document.write(dDiff + " days have passed since 1st Ramadan, 2015" + Ramadan15);
+//10
+msdiff = new Date().getTime() - new Date("January 1 2015").getTime();
+secondsPassed = Math.floor(msdiff / 1000);
+document.write(new Date() + "<br>");
+document.write(secondsPassed + " seconds had passed since the beginning of 2015");
+//11
+var date = new Date();
+document.write("Current date: " + date + "<br>");
+var hourAgo = date.getHours() - 1;
+date.setHours(hourAgo);
+document.write("1 hour ago, it was " + date + "<br>");
+//12
+var date = new Date();
+var date100 = new Date();
+document.write("Current date: " + date + "<br>");
+var yearsAgo = date.getFullYear() - 100;
+date100.setFullYear(yearsAgo);
+alert("Current date: " + date + "\n100 years ago, it was " + date100);
+//13
+var age = +prompt("Enter your age:  ");
+document.write("Your age is " + age + "<br>");
+document.write("Your birth year is " + (new Date().getFullYear() - age) + "<br>");
+//14
+var customerName = "Mubeen Kodvavi";
+mList = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var currentMonth = mList[new Date().getMonth()];
+var noOfUnits = 410;
+var unitCharge = 16;
+var netPayable = noOfUnits * unitCharge;
+var lateSurcharge = 350;
+var grossPayable = netPayable + lateSurcharge;
+document.write("<h1>K-Electric Bill</h1>");
+document.write("Customer Name: <strong>" + customerName + "</strong><br>");
+document.write("Month: <strong>" + currentMonth + "</strong><br>");
+document.write("No of units: <strong>" + noOfUnits + "</strong><br>");
+document.write("Charges per unit: <strong>" + unitCharge + "<br>" + "</strong><br>");
+document.write("Net Amount Payable (within Due Date): <strong>" + netPayable + "</strong><br>");
+document.write("Late Payment Surcharge: <strong>" + lateSurcharge + "</strong><br>");
+document.write("Gross Amount Payable (after Due Date): <strong>" + grossPayable + "</strong><br>");
