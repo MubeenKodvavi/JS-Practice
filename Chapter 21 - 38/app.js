@@ -116,9 +116,49 @@ for (var i = 0; i < arr.length; i++) {
 }
 //17
 var input = prompt("Input:");
-document.write("last character of input: " + );
+document.write("User input: " + input + "<br>");
+document.write("last character of input: " + input[input.length - 1]);
 //18
 var str = "the quick brown fox jumps over the lazy dog";
 document.write("Text: " + str + "<br>")
 var count = (str.match(/the/g) || []).length;
 document.write("There are " + count + "occurence(s) of the word 'the'");
+
+
+//Chapter 26 to 30
+//1
+var input = +prompt("Enter a floating point number");
+document.write("Number: " + input + "<br>");
+document.write("Round off value: " + Math.round(input) + "<br>");
+document.write("Floor value: " + Math.floor(input) + "<br>");
+document.write("Ceil value: " + Math.ceil(input) + "<br>");
+//2
+var input = +prompt("Enter a negative floating point number");
+document.write("Number: " + input + "<br>");
+document.write("Round off value: " + Math.round(input) + "<br>");
+document.write("Floor value: " + Math.floor(input) + "<br>");
+document.write("Ceil value: " + Math.ceil(input) + "<br>");
+//3
+var input = +prompt("Enter a number to show absolute value: ");
+document.write("The absolute value of " + input + " is " + Math.abs(input));
+//4
+document.write("Random dice value: " + Math.floor(Math.random() * 6));
+//5
+var coinValue = Math.floor(Math.random() * 2);
+if (coinValue) {
+    document.write("Random coin value: Heads");
+} else {
+    document.write("Random coin value: Tails");
+}
+//6
+document.write("Random number from 1 to 100 is: " + Math.ceil(Math.random() * 100));
+//7
+var weight = prompt("Enter your weight in kilograms");
+var w = weight.split("k");
+document.write("The weight of user is " + w[0] + " kilograms");
+//8
+var secretNumber = Math.ceil(Math.random() * 10);
+var guess = +prompt("Enter a number from 1 to 10:");
+if (guess === secretNumber) {
+    alert("Congratulations");
+}
